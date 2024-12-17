@@ -35,19 +35,9 @@ Enviar os arquivos ao Git
 git push -u origin main
 '''
 
-…or push an existing repository from the command line
-git remote add origin https://github.com/eletroweb/proj-python-django.git
-git branch -M main
-git push -u origin main
+Criar o arquivo .gitignore e não enviar os arquivos compilados
 '''
-
-'''
-'''
-
-'''
-'''
-
-'''
+git rm --cached -r admin/**pycache**/
 '''
 
 ## Como rodar o projeto baixado
