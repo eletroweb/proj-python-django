@@ -7,15 +7,28 @@
 
 ## Como usar Github
 
+Cria uma pasta git dentro da pasta
 '''
 git init
 '''
-echo "# proj-python-django" >> README.md
-git init
-git add README.md
+Commit registra as alterações feitas no projeto
+
+'''
 git commit -m "first commit"
+'''
+Verificar em qual branch está.
+'''
+git branch
+'''
+Renomear a branch atual no Git para main.
+'''
 git branch -M main
+'''
+Adicionar um repositório remoto ao repositório local
+'''
 git remote add origin https://github.com/eletroweb/proj-python-django.git
+
+'''
 git push -u origin main
 '''
 …or push an existing repository from the command line
@@ -35,11 +48,12 @@ git push -u origin main
 
 ## Como rodar o projeto baixado
 
-Instalar o conector mysql
-Para mudar o banco de dados padrão, exclua o arquivo db.sqlite3 e vamos instalar o mysqlclient
+Instalar o conector mysql<br>
+Para mudar o banco de dados padrão, exclua o arquivo db.sqlite3 e vamos instalar o mysqlclient<br>
 '''
 pip install mysqlclient
 '''
+
 Criar a base de dados usei o nome do banco como sendo django
 '''
 CREATE DATABASE django CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
