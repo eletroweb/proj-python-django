@@ -117,3 +117,25 @@ Acessar a área administrativa
 '''
 http://127.0.0.1/admin
 '''
+
+# Criar os pacotes do projeto
+
+alterar dentro da pasta admin, em aplicativos e adicionar o app que foi criado.
+obs: o bom se algo der ruim é só excluir o app que você criou, não altera o projeto em nada.
+'''
+python manage.py startapp travel_packages
+'''
+
+Instalar a Biblioteca para trabalhar com o campo ImageField
+'''
+python -m pip install Pillow
+'''
+
+Verificar se o Pillow foi instalada
+'''
+python -m pip show Pillow
+'''
+Depois de mexer no arquivo models do app que você criou, precisa criar as tabelas, então é necessário rodar o arquivo abaixo.
+'''
+python manage.py makemigrations travel_packages --name travel_packages
+'''
