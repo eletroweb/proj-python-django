@@ -1,3 +1,9 @@
 from django.shortcuts import render
+from .models import TravelPackages
 
-# Create your views here.
+
+def home(request):
+    travel_packages = TravelPackages.objects.all()
+    return render(
+        request, "travel_packages/home.html", {"travel_packages": travel_packages}
+    )
