@@ -81,6 +81,11 @@ Depois executa as Migrations
 python manage.py migrate
 '''
 
+Instalar o Bootstrap
+'''
+pip install django-bootstrap-v5
+'''
+
 ## Sequencia para criar o projeto
 
 1. Criar o projeto Djando
