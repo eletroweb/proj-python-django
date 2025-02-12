@@ -4,7 +4,6 @@
 
   <div class="row">
     {% for package in packages %}
-    <!-- Aqui você pode adicionar o HTML para exibir cada pacote -->
     <div class="col-md-4 mb-4">
       <div class="card mb-4 shadow">
         {% if package.image %}
@@ -14,8 +13,21 @@
           alt="{{ package.name }}"
         />
         {% endif %}
-        <div class="card-body text-center:">
-          <h5 class="card-title">{{ package.name }}</5>
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ package.name }}</h5>
+          <p class="card-text">
+            <span class="text-muted">
+              <del>
+                <small> R$ {{ package.original_price }} </small>
+              </del>
+            </span>
+            <span class="text-success"> R$ {{ package.final_price }} </span>
+          </p>
+          <a
+            href="{% url 'package_detail' id=package.id %}"
+            class="btn btn-primary btn-sm"
+            >Mais Detalhes</a
+          >
         </div>
       </div>
     </div>

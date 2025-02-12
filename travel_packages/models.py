@@ -5,6 +5,7 @@ import os
 
 class TravelPackages(models.Model):
     image = models.ImageField(upload_to="travel_packages/", verbose_name="Imagem")
+
     name = models.CharField(max_length=255, verbose_name="Nome")
     original_price = models.DecimalField(
         max_digits=10, decimal_places=2, verbose_name="Preço Original"
@@ -15,6 +16,9 @@ class TravelPackages(models.Model):
     final_price = models.DecimalField(
         max_digits=10, decimal_places=2, verbose_name="Preço Final", editable=False
     )
+
+    description = models.TextField(verbose_name="Descrição", blank=True, null=True)
+
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="Data de Criação")
     updated_at = models.DateTimeField(auto_now=True, verbose_name="Data de Edição")
 

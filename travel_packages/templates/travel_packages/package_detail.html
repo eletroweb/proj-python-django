@@ -1,0 +1,25 @@
+{% extends "travel_packages/base.html" %} {% block content %}
+<div class="container mt-5">
+  <h4>Pacote de Viagem: {{ package.name }}</h4>
+  <div class="row">
+    <div class="col-md-6">
+      {% if package.image %}
+      <img
+        src="{{ package.image.url }}"
+        class="img-fluid"
+        alt="{{ package.name }}"
+      />
+      {% endif %}
+    </div>
+    <div class="col-md-6">
+      <p>
+        <strong>Preço Original:</strong>
+        <del>R$ {{ package.original_price }}</del>
+      </p>
+      <p><strong>Preço Final:</strong> R$ {{ package.final_price }}</p>
+      <p><strong>Descrição:</strong> {{ package.description }}</p>
+      <a href="{% url 'home' %}" class="btn btn-secondary">Voltar</a>
+    </div>
+  </div>
+</div>
+{% endblock content %}

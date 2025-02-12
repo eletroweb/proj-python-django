@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "travel_packages",
     "bootstrap5",
+    "tinymce",
 ]
 
 MIDDLEWARE = [

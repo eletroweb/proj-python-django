@@ -80,10 +80,23 @@ Depois executa as Migrations
 '''
 python manage.py migrate
 '''
+'''
+python manage.py makemigrations
+'''
 
 Instalar o Bootstrap
 '''
 pip install django-bootstrap-v5
+'''
+
+Instalar o Editor para área de descrição
+'''
+pip install django-tinymce
+'''
+
+Instalar a django-jet para mudar o painel administration
+'''
+pip install django-jet
 '''
 
 ## Sequencia para criar o projeto

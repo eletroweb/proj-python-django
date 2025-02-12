@@ -1,0 +1,38 @@
+{% extends "travel_packages/base.html" %} {% block content %}
+<div class="container mt-5">
+  <h4>Black Friday Prorrogada</h4>
+
+  <div class="row">
+    {% for package in packages %}
+    <!-- Aqui você pode adicionar o HTML para exibir cada pacote -->
+    <div class="col-md-4 mb-4">
+      <div class="card mb-4 shadow">
+        {% if package.image %}
+        <img
+          src="{{ package.image.url }}"
+          class="card-img-top"
+          alt="{{ package.name }}"
+        />
+        {% endif %}
+        <div class="card-body text-center:">
+          <h5 class="card-title">{{ package.name }}</5>
+            <p class="card-text">
+              <span class="text-muted">
+                <del>
+                  <small>
+                    R$ {{ package.original_price }}
+                  </small>
+                </del>
+              </span>
+               <span class="text-success">
+                    R$ {{ package.final_price }}
+               </span>
+            </p>
+            <a href="#" class="btn btn-primary btn-sm">Mais Detalhes</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock content %}
